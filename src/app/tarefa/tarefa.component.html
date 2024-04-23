@@ -1,0 +1,51 @@
+<form class="example-form" >
+<BR>
+  <mat-form-field class="example-full-width">
+    <mat-label>RESUMO:</mat-label>
+    <input matInput placeholder="Ex. DNS não funciona " value="">
+  </mat-form-field>
+
+
+	<br />
+
+  <mat-label>Tipos de Problema:</mat-label>
+  <mat-radio-group aria-label="Select an option">
+    <mat-radio-button value="1">Tarefa</mat-radio-button>
+    <mat-radio-button value="2">Bug</mat-radio-button>
+  </mat-radio-group><br>
+
+	<br />
+
+  <mat-form-field>
+    <mat-label>Selecione:</mat-label>
+    <select matNativeControl required>
+      <option value="volvo">Crítica</option>
+      <option value="saab">Alta</option>
+      <option value="mercedes">Média</option>
+      <option value="audi">Baixa</option>
+    </select>
+  </mat-form-field>
+
+	<br />
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Prazo final:</mat-label>
+    <input matInput>
+  </mat-form-field>
+
+	<br />
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Descrição:</mat-label>
+    <textarea matInput></textarea>
+  </mat-form-field>
+	<br />
+
+  <section>
+    <div class="example-button-row">
+      <button mat-flat-button>Enviar</button>
+    </div>
+  </section>
+  <br>
+
+</form>
