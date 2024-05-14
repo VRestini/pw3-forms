@@ -5,7 +5,8 @@
       <mat-label>Nome</mat-label>
       <input matInput placeholder="Ex. Horácio Augusto da Silveira" formControlName="nome">
 
-      <mat-error *ngIf="false">Nome é obrigatório</mat-error>
+      <mat-error *ngIf="cadastroForm.controls.nome.hasError('required')">Nome é obrigatório</mat-error>
+      <mat-error *ngIf="cadastroForm.controls.nome.hasError('minLenght', 'maxLenght')">Caracteres entre 5-35</mat-error>
 
   </mat-form-field>
 
@@ -15,8 +16,8 @@
       <mat-label>E-mail</mat-label>
       <input matInput placeholder="Ex. horacio@etec.sp.gov.br" formControlName="email" >
 
-      <mat-error *ngIf="false">E-mail é obrigatório</mat-error>
-      <mat-error *ngIf="false">E-mail inválido</mat-error>
+      <mat-error *ngIf="cadastroForm.controls.nome.hasError('required')">E-mail é obrigatório</mat-error>
+      <mat-error *ngIf="cadastroForm.controls.email.hasError('email')">E-mail inválido</mat-error>
 
   </mat-form-field>
 
@@ -26,7 +27,8 @@
       <mat-label>Nome de Usuário</mat-label>
       <input matInput placeholder="Ex. horacio.augusto" formControlName="usuario">
 
-      <mat-error *ngIf="false">Nome de Usuário inválido</mat-error>
+      <mat-error *ngIf="cadastroForm.controls.usuario.hasError('usuario')">Nome de Usuário inválido</mat-error>
+      <mat-error *ngIf="cadastroForm.controls.usuario.hasError('contemEspacos')">Nome de Usuário não deve conter espaços</mat-error>
   </mat-form-field>
 
   <br />
@@ -38,7 +40,7 @@
         <mat-icon>{{ocultarSenha ? 'visibility_off' : 'visibility'}}</mat-icon>
       </button>
 
-      <mat-error *ngIf="false">Senha é obrigatório</mat-error>
+      <mat-error *ngIf="cadastroForm.controls.senha.hasError('senha')">Senha é obrigatório</mat-error>
 
     </mat-form-field>
 
@@ -51,8 +53,8 @@
         <mat-icon>{{ocultarSenha ? 'visibility_off' : 'visibility'}}</mat-icon>
       </button>
 
-      <mat-error *ngIf="false">Confirmar senha é obrigatório</mat-error>
-      <mat-error *ngIf="false">As senhas devem ser as mesmas</mat-error>
+      <mat-error *ngIf="cadastroForm.controls.confirmarSenha.hasError('required')">Confirmar senha é obrigatório</mat-error>
+      <mat-error *ngIf="cadastroForm.controls.confirmarSenha.hasError('confirmarSenha')">As senhas devem ser as mesmas</mat-error>
 
     </mat-form-field>
 

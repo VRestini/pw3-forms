@@ -13,6 +13,7 @@ import {MatDividerModule} from '@angular/material/divider';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import { CadastroComponent } from './cadastro/cadastro.component';
+import { CustomValidatorComponent } from './validator/custom-validator/custom-validator.component';
 
 
 
@@ -20,7 +21,8 @@ import { CadastroComponent } from './cadastro/cadastro.component';
   declarations: [
     AppComponent,
     TarefaComponent,
-    CadastroComponent
+    CadastroComponent,
+    CustomValidatorComponent
   ],
   imports: [
     BrowserModule,
